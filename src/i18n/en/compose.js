@@ -991,6 +991,7 @@ export default {
     },
     record: {
       listLoadFailed: 'Could not load record list',
+      created: 'Record created',
       createFailed: 'Could not create this record',
       deleteFailed: 'Could not delete this record',
       loadFailed: 'Could not load this record',

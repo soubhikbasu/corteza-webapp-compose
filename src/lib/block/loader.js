@@ -1,5 +1,6 @@
 export { Automation } from './Automation'
 export { Record } from './Record'
+export { RecordCreator } from './RecordCreator'
 export { RecordList } from './RecordList'
 export { Calendar } from './Calendar'
 export { Chart } from './Chart'
