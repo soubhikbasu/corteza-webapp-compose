@@ -12,8 +12,8 @@ export default class Block {
     this.xywh = [0, 0, 3, 3]
     if (Array.isArray(xywh) && xywh.length === 4) {
       this.xywh = xywh
-    } else {
-      console.log('xywh not compatible', xywh)
+    } else if (xywh !== undefined) {
+      console.warn('xywh not compatible', { xywh })
     }
 
     this.kind = this.kind || undefined
