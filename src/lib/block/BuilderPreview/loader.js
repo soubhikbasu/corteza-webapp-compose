@@ -1,5 +1,6 @@
 export { default as Automation } from './Automation'
 export { default as Record } from './Record'
+export { default as RecordCreator } from './RecordCreator'
 export { default as RecordList } from './RecordList'
 export { default as Calendar } from './Calendar'
 export { default as Chart } from './Chart'

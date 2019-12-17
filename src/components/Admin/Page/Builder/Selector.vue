@@ -5,7 +5,7 @@
             class="p-5 m-1 flex-fill"
             @click="$emit('select', type.block)"
             v-for="(type) in types"
-            :disabled="!recordPage && type.recordPageOnly"
+            :disabled="recordPage === type.disabledIfRecordPage"
             :key="type.label">{{type.label}}</b-button>
       <div class="w-100">
         <hr />
@@ -42,7 +42,12 @@ export default {
         {
           label: this.$t('block.record.label'),
           block: new Block({ kind: 'Record' }),
-          recordPageOnly: true,
+          disabledIfRecordPage: false,
+        },
+        {
+          label: this.$t('block.recordCreator.label'),
+          block: new Block({ kind: 'RecordCreator' }),
+          disabledIfRecordPage: true,
         },
         {
           label: this.$t('block.recordList.label'),
@@ -64,10 +69,7 @@ export default {
           label: this.$t('block.recordOrganizer.label'),
           block: new Block({ kind: 'RecordOrganizer' }),
         },
-      ].map(type => ({
-        ...type,
-        recordPageOnly: false,
-      })),
+      ],
     }
   },
 }

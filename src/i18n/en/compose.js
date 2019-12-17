@@ -59,7 +59,13 @@ export default {
         lightBg: 'Light background',
         darkBg: 'Dark background',
         noBorder: 'No border',
+      },
+    },
+    recordCreator: {
+      label: 'Record creator',
 
+      preview: {
+        fieldsFromModule: 'Record creator block, editing record fields ({{0}}) from module {{1}}',
       },
     },
     recordOrganizer: {
